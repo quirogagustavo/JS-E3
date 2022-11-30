@@ -16,7 +16,7 @@ class Pizza {
 }
 
 let tipoPizza=[];
-tipoPizza.push(new Pizza(1,'Muzzarella',['Salsa de tomate','Muzzarella'],700,'./assets/images/muza.png'));
+tipoPizza.push(new Pizza(1,'Muzzarella',['Salsa de tomate','Muzzarella'],700,'./assets/images/muza.jpg'));
 tipoPizza.push(new Pizza(2,'Especial',['Tomate','Muzzarella','Jamon','Morron','Aceitunas'],1000,'./assets/images/pizza-especial.jpg'));
 tipoPizza.push(new Pizza(3,'Calabresa',['Muzzarella','Tomate','cantimpalo'],1200,'./assets/images/pizza-calabresa.png'));
 tipoPizza.push(new Pizza(4,'Napolitana',['Muzzarella','Rodaja de Tomate','Ajo'],1100,'./assets/images/pizza-napolitana.jpg'));
