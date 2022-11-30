@@ -78,7 +78,7 @@ const addTask = (e) => {
     //Verifica que el ID ingresado esta en el arreglo
     if (result.length===0) { 
         let mensaje =[]; 
-        mensaje.push(new Pizza(0,'No hay pizza para el ID',[''],taskName));
+        mensaje.push(new Pizza(0,'No hay pizza para el ID',[''],pizzaId));
         renderPizzaList(mensaje);
         return;    
     }
