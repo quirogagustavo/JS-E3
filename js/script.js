@@ -38,7 +38,7 @@ const createHTMLList = ({nombre,precio,ingredientes,src}) => {
     </div>
     <div class="ingrediente">${ingredientes}</div>
 
-    <div class="precio">${precio}</div>
+    <div class="precio">Precio: ${precio} $</div>
     <div></div>
   </div>`
     //<li> <h2>${nombre}</h2>       <h3>${precio}</h3> </li>`

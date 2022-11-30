@@ -140,8 +140,11 @@ h1 {
 }
 
 .precio {
-  background: #6699ff;
-  border-radius: 0 0 15px 15px;
+  /*background: #6699ff;*/
+  border-radius: 15px 15px 15px 15px;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 10px;
   text-align: center;
   visibility: visible;
