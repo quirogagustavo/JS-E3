@@ -110,27 +110,33 @@ h1 {
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
   border-radius: 15px;
   font-family: sans-serif;
+  visibility: hidden;
 }
+
 .nombre {
   font-size: 24px;
   padding: 10px 10px 0 10px;
   text-align: center;
   color: white;
+  visibility: visible;
 }
 
 .imagen {
   padding: 10px 10px 10px 10px;
   text-align: center;
+  visibility: visible;
 }
 
 .imagen img {
   width: 60%;
+  visibility: visible;
 }
 
 .ingrediente {
   padding: 10px 10px 10px 10px;
   text-align: center;
   color: white;
+  visibility: visible;
 }
 
 .precio {
@@ -138,19 +144,7 @@ h1 {
   border-radius: 0 0 15px 15px;
   padding: 10px;
   text-align: center;
-}
-.precio a {
-  text-decoration: none;
-  color: white;
-}
-.precio a:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  content: "";
+  visibility: visible;
 }
 
 /*Fin de Card */

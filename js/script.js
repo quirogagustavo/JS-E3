@@ -1,7 +1,8 @@
 const input=document.querySelector('.input-text');
 const addForm=document.querySelector('.add-form');
 const taskList=document.querySelector('.card');
-
+const nombreClass=document.querySelector('.nombre');
+//taskList.style.visibility='hidden';
 
 //Aca empieza E1 JS
 class Pizza {
@@ -23,7 +24,13 @@ tipoPizza.push(new Pizza(5,'Palmito',['Muzzarella','Jamon','Palmito','Salsa Golf
 tipoPizza.push(new Pizza(6,'Margarita',['Muzzarella','Tomate','Oregano'],800,'./assets/images/pizza-margarita.jpg'));
 
 const createHTMLList = ({nombre,precio,ingredientes,src}) => { 
-    console.log(nombre);
+    //console.log(nombre);
+    
+ //console.log(nombreClass);
+ //taskList.className='card_visible';
+ 
+/*    document.querySelector(".imagen").style.visibility="imagen";
+*/
     return `<div class="card">
     <div class="nombre">${nombre}</div>
     <div class="imagen">
@@ -32,6 +39,7 @@ const createHTMLList = ({nombre,precio,ingredientes,src}) => {
     <div class="ingrediente">${ingredientes}</div>
 
     <div class="precio">${precio}</div>
+    <div></div>
   </div>`
     //<li> <h2>${nombre}</h2>       <h3>${precio}</h3> </li>`
 }
@@ -39,8 +47,9 @@ const createHTMLList = ({nombre,precio,ingredientes,src}) => {
 const renderPizzaList = (result) => {
 
     const allTasks = result.map((task) => createHTMLList(task)).join('');
+    console.log(allTasks);
     
-
+    taskList.style.visibility='visible';        
     taskList.innerHTML=allTasks;
 }
 
@@ -74,10 +83,15 @@ const addTask = (e) => {
         return;    
     }
     
-    
+    //Almacena en localstorage
+    localStorage.setItem('buscado',JSON.stringify(result));   
     renderPizzaList(result);
 
 };
 
-renderPizzaList(tipoPizza);
+const ultimo=localStorage.getItem('buscado');
+if (ultimo !== null) {
+    ultimaPizza=JSON.parse(ultimo);
+    renderPizzaList(ultimaPizza)
+};
 addForm.addEventListener('submit',addTask);
