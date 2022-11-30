@@ -66,8 +66,8 @@ const addTask = (e) => {
 
     //Verifica que ingreso un numero
     if (isNaN(parseInt(input.value))) { 
-        let mensaje =[]; 
-        mensaje.push(new Pizza(0,'Debe ingresar un numero de ID',[''],''));
+        let mensaje =[];
+        mensaje.push(new Pizza(0,'Advertencia',['Debe ingresar un numero de ID'],'','./assets/images/advertencia.jpg'));
         renderPizzaList(mensaje);
         return;    
     }
@@ -78,7 +78,8 @@ const addTask = (e) => {
     //Verifica que el ID ingresado esta en el arreglo
     if (result.length===0) { 
         let mensaje =[]; 
-        mensaje.push(new Pizza(0,'No hay pizza para el ID',[''],pizzaId));
+        
+        mensaje.push(new Pizza(0,'Advertencia',['No hay pizza para el ID ' + pizzaId],'','./assets/images/advertencia.jpg'));
         renderPizzaList(mensaje);
         return;    
     }
